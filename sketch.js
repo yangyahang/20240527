@@ -69,7 +69,6 @@ function drawSkeleton() {
     partA = pose.keypoints[0];
     if (partA.score > 0.1) {
       ellipse(partA.x, partA.y, 50);
-      fill(255)
     }
     // shoulder to wrist
     for (j = 5; j < 9; j++) {
