@@ -44,6 +44,10 @@ async function setup() {
   strokeWeight(5);
 }
 
+function preload(){
+	noseImg = loadImage("nose.png");
+}
+
 function draw() {
   image(video, 0, 0);
   drawSkeleton();
@@ -69,6 +73,8 @@ function drawSkeleton() {
     partA = pose.keypoints[0];
     if (partA.score > 0.1) {
       ellipse(partA.x, partA.y, 50);
+      imageMode(CENTER)
+      image(noseImg,partA.x,partA.y,50,50)
     }
     // shoulder to wrist
     for (j = 5; j < 9; j++) {
