@@ -34,7 +34,7 @@ async function getPoses() {
 }
 
 async function setup() {
-  createCanvas(1280, 960);
+  createCanvas(640, 480);
   video = createCapture(VIDEO, videoReady);
   video.size(width, height);
   video.hide();
